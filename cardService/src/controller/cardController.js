@@ -1,5 +1,6 @@
 import auth from "../../../common/middleware/authMiddleware";
 import db from "../../../common/db";
+
 export default function(app) {
 
   //read all

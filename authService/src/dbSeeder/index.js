@@ -50,7 +50,7 @@ export default async () => {
     )
       `;
 
-    db.query(createDeliveryTableQuery);
+    await db.query(createDeliveryTableQuery);
 
     console.log("deliveries table ready!");
 
@@ -69,6 +69,6 @@ export default async () => {
     console.log("orders table ready!");
   } catch (e) {
     console.log("ERROR OCCURED!!!");
-    Console.log(e);
+    console.log(e);
   }
 };

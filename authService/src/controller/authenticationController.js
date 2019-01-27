@@ -1,5 +1,6 @@
 import db from "../../../common/db";
 import { createUser, validateUser, verifyToken } from "../user";
+import dbSeeder from "../dbSeeder";
 
 export default function(app) {
   //test route return all users
@@ -7,6 +8,11 @@ export default function(app) {
     const text = "SELECT phone,name,surname FROM users ";
     const val = await db.query(text);
     res.send(val.rows);
+  });
+
+  app.get("/initdb",async function(req, res) {
+    await dbSeeder();
+    res.send("db checked!:)");
   });
 
   app.post("/signup", async function(req, res) {

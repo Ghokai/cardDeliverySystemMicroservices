@@ -16,7 +16,7 @@ namespace orderService.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var user = (User)this.HttpContext.Items["tokenUser"];
+            var user = (User)this.HttpContext.Items["authUser"];
             return Json(user);
         }
     }
