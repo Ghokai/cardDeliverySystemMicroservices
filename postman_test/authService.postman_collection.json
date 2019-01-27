@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "727fb74b-14a2-4edd-89f8-7d73e289f846",
+		"name": "authService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "select users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3333",
+					"host": [
+						"localhost"
+					],
+					"port": "3333"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"phone\":\"12314355\",\n\t\"password\":\"123456\",\n\t\"name\":\"John\",\n\t\"surname\":\"Doe\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3333/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"phone\":\"12314355\",\n\t\"password\":\"123456\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3333/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "valitadeToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3333/validatetoken",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"validatetoken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

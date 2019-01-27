@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "9162f7fc-5bba-4513-9b49-cdd755983bdf",
+		"name": "deliveryService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "selectall",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5555/deliveries",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"deliveries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select one",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5555/deliveries/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"deliveries",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"deliveryTypeName\":\"super delivery\",\n\t\"price\":600,\n\t\"countryCode\":90\n}"
+				},
+				"url": {
+					"raw": "localhost:5555/deliveries",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"deliveries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"deliveryTypeName\":\"easymonkey\",\n\t\"price\":25,\n\t\"countryCode\":2\n}"
+				},
+				"url": {
+					"raw": "localhost:5555/deliveries/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"deliveries",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5555/deliveries/1",
+					"host": [
+						"localhost"
+					],
+					"port": "5555",
+					"path": [
+						"deliveries",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "761c7070-6f45-43c1-a0d7-3fe684d6823c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "08c8ec10-2479-4397-aa68-e61ffb424fef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

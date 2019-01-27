@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "bfbd81dc-3d78-49fc-96cf-cf33f805ecd2",
+		"name": "user address info service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "selectall",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:6666/userAddressInfos",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"userAddressInfos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "select one",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:6666/userAddressInfos/2",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"userAddressInfos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"addressType\":\"new work\",\n\t\"addressDescription\":\"jupiterr ...\",\n\t\"isActive\":\"true\"\n}"
+				},
+				"url": {
+					"raw": "localhost:6666/userAddressInfos",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"userAddressInfos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"addressType\":\"work\",\n\t\"addressDescription\":\"xxxxx aaaaa ...\",\n\t\"isActive\":\"false\"\n}"
+				},
+				"url": {
+					"raw": "localhost:6666/userAddressInfos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"userAddressInfos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZSI6IjEyMzE0MzU1IiwibmFtZSI6IkpvaG4iLCJzdXJuYW1lIjoiRG9lIiwiaWF0IjoxNTQ4NTEzNzc2LCJleHAiOjE1NDkxMTg1NzZ9.TCiUBIt1ZZU4kKzdKcL53BbyC5ZQ7SU6WxemLwM_4ZU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:6666/userAddressInfos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "6666",
+					"path": [
+						"userAddressInfos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "761c7070-6f45-43c1-a0d7-3fe684d6823c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "08c8ec10-2479-4397-aa68-e61ffb424fef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
