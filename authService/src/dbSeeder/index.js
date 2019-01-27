@@ -1,7 +1,8 @@
 import db from "../../../common/db";
 
-export default () => {
-  const createUserTableQuery = `
+export default async () => {
+  try {
+    const createUserTableQuery = `
     CREATE TABLE IF NOT EXISTS Users(
         phone varchar(100) primary key,
         password text,
@@ -10,15 +11,11 @@ export default () => {
     )
       `;
 
-  db.query(createUserTableQuery)
-    .then(res => {
-      console.log("users table ready!");
-    })
-    .catch(err => {
-      console.log(err);
-    });
+    await db.query(createUserTableQuery);
 
-  const createUserAddressInfoTableQuery = `
+    console.log("users table ready!");
+
+    const createUserAddressInfoTableQuery = `
     CREATE TABLE IF NOT EXISTS UserAddressInfos(
         id SERIAL primary key,
         userPhone varchar(100) REFERENCES Users(phone),
@@ -28,15 +25,11 @@ export default () => {
     )
       `;
 
-  db.query(createUserAddressInfoTableQuery)
-    .then(res => {
-      console.log("useraddressinfos table ready!");
-    })
-    .catch(err => {
-      console.log(err);
-    });
+    await db.query(createUserAddressInfoTableQuery);
 
-  const createCardTableQuery = `
+    console.log("useraddressinfos table ready!");
+
+    const createCardTableQuery = `
     CREATE TABLE IF NOT EXISTS cards(
         id SERIAL primary key,
         cardName varchar(100) UNIQUE,
@@ -44,15 +37,11 @@ export default () => {
     )
       `;
 
-  db.query(createCardTableQuery)
-    .then(res => {
-      console.log("cards table ready!");
-    })
-    .catch(err => {
-      console.log(err);
-    });
+    await db.query(createCardTableQuery);
 
-  const createDeliveryTableQuery = `
+    console.log("cards table ready!");
+
+    const createDeliveryTableQuery = `
     CREATE TABLE IF NOT EXISTS deliveries(
         id SERIAL primary key,
         deliveryTypeName varchar(100) UNIQUE,
@@ -61,15 +50,11 @@ export default () => {
     )
       `;
 
-  db.query(createDeliveryTableQuery)
-    .then(res => {
-      console.log("deliveries table ready!");
-    })
-    .catch(err => {
-      console.log(err);
-    });
+    db.query(createDeliveryTableQuery);
 
-  const createOrderTableQuery = `
+    console.log("deliveries table ready!");
+
+    const createOrderTableQuery = `
     CREATE TABLE IF NOT EXISTS orders(
         id SERIAL primary key,
         userPhone varchar(100) REFERENCES users(phone),
@@ -79,11 +64,11 @@ export default () => {
     )
       `;
 
-  db.query(createOrderTableQuery)
-    .then(res => {
-      console.log("orders table ready!");
-    })
-    .catch(err => {
-      console.log(err);
-    });
+    await db.query(createOrderTableQuery);
+
+    console.log("orders table ready!");
+  } catch (e) {
+    console.log("ERROR OCCURED!!!");
+    Console.log(e);
+  }
 };
