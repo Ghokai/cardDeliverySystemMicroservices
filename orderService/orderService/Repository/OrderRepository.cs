@@ -17,7 +17,7 @@ namespace orderService.Repository
             this._odbc = dbcontext;
         }
 
-        private void CheckAddressForUser(string userphone,int userAddressId)
+        private void CheckAddressForUser(string userphone, int userAddressId)
         {
             var userAdress = _odbc.useraddressinfos.Where(a => a.userphone == userphone && a.id == userAddressId).FirstOrDefault();
             if (userAdress == null)
@@ -32,12 +32,12 @@ namespace orderService.Repository
 
         public void AddOrder(User user, Order newOrder)
         {
-            if(newOrder.cardid<=0 || newOrder.deliveryid <= 0 || newOrder.useraddressid <= 0)
+            if (newOrder.cardid <= 0 || newOrder.deliveryid <= 0 || newOrder.useraddressid <= 0)
             {
                 throw new Exception("Incorrect Input Values!");
             }
 
-            CheckAddressForUser(user.phone,newOrder.useraddressid);
+            CheckAddressForUser(user.phone, newOrder.useraddressid);
 
             newOrder.id = 0;
             newOrder.userphone = user.phone;
@@ -49,7 +49,7 @@ namespace orderService.Repository
         public void DeleteOrder(User user, int id)
         {
             var existingOrder = _odbc.orders.Where(o => o.userphone == user.phone && o.id == id).FirstOrDefault();
-            if(existingOrder == null)
+            if (existingOrder == null)
             {
                 throw new Exception("Order not found!");
             }
@@ -84,7 +84,7 @@ namespace orderService.Repository
             if (newOrder.cardid > 0) existingOrder.cardid = newOrder.cardid;
             if (newOrder.useraddressid > 0)
             {
-                var userAdress = _odbc.useraddressinfos.Where(a => a.userphone == user.phone && a.id == newOrder.useraddressid).FirstOrDefault();
+                //var userAdress = _odbc.useraddressinfos.Where(a => a.userphone == user.phone && a.id == newOrder.useraddressid).FirstOrDefault();
 
                 CheckAddressForUser(user.phone, newOrder.useraddressid);
 
