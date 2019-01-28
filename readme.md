@@ -16,4 +16,4 @@ postgresql db diagram
 
 microservices component diagram
 
-![cardssistemcompnenet diagram](https://user-images.githubusercontent.com/11095906/51806749-d83baa00-228e-11e9-9614-0241b2eef8bf.PNG)
+![image](https://user-images.githubusercontent.com/11095906/51853020-5ef89180-2338-11e9-8536-aba4e9fc800b.png)
